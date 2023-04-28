@@ -1,0 +1,20 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "rootDirs": [
+            "../src",
+            "."
+        ],
+        "paths": {
+            "@src": [
+                "../src/index"
+            ],
+            "@src/*": [
+                "../src/*"
+            ]
+        }
+    },
+    "include": [
+        "**/*.ts"
+    ]
+}
