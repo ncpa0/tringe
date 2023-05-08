@@ -22,8 +22,16 @@
     "typescript": "^5.0.4"
   },
   "name": "tringe",
-  "version": "1.0.0",
-  "main": "./dist/index.js",
+  "version": "0.0.1",
+  "main": "./dist/legacy/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
   "scripts": {
     "fix:lint": "eslint --fix .",
     "fix:prettier": "prettier -w ./src .",
@@ -33,14 +41,20 @@
     "test:tsc": "tsc --noEmit",
     "build": "node ./scripts/build.mjs"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "decorators",
+    "experimental decorators",
+    "dependency injection",
+    "di"
+  ],
   "repository": {
-    "url": ""
+    "url": "https://github.com/ncpa0/tringe"
   },
-  "description": "",
+  "description": "A TypeScript library leveraging decorators to provide a dependency injection mechanism.",
   "license": "MIT",
   "author": {
     "name": "Szymon Bretner",
-    "email": ""
+    "email": "szymonb21@gmail.com"
   }
 }
