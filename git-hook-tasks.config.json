@@ -17,7 +17,7 @@
       },
       {
         "name": "Jest Tests",
-        "script": "test:jest"
+        "script": "test:unit"
       }
     ],
     "pre-commit": [],
